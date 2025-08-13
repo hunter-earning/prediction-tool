@@ -72,7 +72,7 @@ const AppHub: React.FC<AppHubProps> = ({ onSelectPredictionTool }) => {
   const [selectedApp, setSelectedApp] = useState<string>('');
   const [gameId, setGameId] = useState<string>('');
   const [error, setError] = useState<string>('');
-  const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
+  // const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
 
   // App data with real information
   const apps = [
@@ -173,12 +173,7 @@ const AppHub: React.FC<AppHubProps> = ({ onSelectPredictionTool }) => {
       if (app.icon) {
         const img = new Image();
         img.src = app.icon;
-        img.onload = () => {
-          setImagesLoaded(prev => ({
-            ...prev,
-            [app.id]: true
-          }));
-        };
+        // Image preloading without tracking loaded state
       }
     });
   }, []);
