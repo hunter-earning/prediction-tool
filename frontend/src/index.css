@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1a1a2e;
+  color: #e6e6e6;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #0f3460;
+  --secondary-color: #e94560;
+  --accent-color: #ffd700;
+  --text-color: #e6e6e6;
+  --background-color: #1a1a2e;
+  --card-background: #16213e;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
